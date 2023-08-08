@@ -354,6 +354,8 @@
 @media (1094px <= width <= 1400px){
     .section4{
         padding: 100px 50px;
+        min-height: 100vh;
+        height: 100%;
     }
        .section1,
     .section2{
@@ -380,6 +382,8 @@
 @media (946px <= width <= 1093px){
     .section4 {
         padding: 100px 50px;
+        min-height: 100vh;
+        height: 100%;
     }
     .section3{
         padding: 90px 50px 90px 0;
@@ -411,7 +415,9 @@
 @media(768px<= width <946px) {
     .section1{
         padding: 0 100px;
-        height: 100vh;
+        min-height: 70vh; 
+        
+        height: 100%;
     }
     .container-1{
         display: flex;
@@ -477,7 +483,8 @@
 
     .section1{
         padding: 0 30px;
-        /* height: 100; */
+        min-height: 60vh;
+        height: 100%;
     }
     .container-1{
         display: flex;
@@ -557,7 +564,11 @@
 }
 /* Toggle bar release */
 @media (width < 500px){
-
+    .section1{
+        padding: 0 100px;
+        min-height: 40vh;
+        height: 100%;
+    }
     .container-2{
         padding: 0;
         width: 100%;
