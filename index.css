@@ -4,16 +4,16 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 
 .section1 {
     width: 100%;        
-    height: 1007px;
+    height: 100vh;
     display: flex;
-    padding: 0 300px;
+    padding: 0 200px;
     flex-direction: column;       
     background: #1E71FF;
-    gap: 100px;
 }
 .navbar{
     display: flex;
@@ -32,23 +32,65 @@
     color: #FFFFFF ; 
     font-family: 'Roboto', sans-serif;
     position: relative;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 16.41px;
 }
+.navbar-content a:hover{
+    background: #619afd;
+}
 .tryfree1 {
+    width: 110px;
     border-radius: 60px;
     background: #619afd;
-    padding: 10px; 
+    padding: 7px; 
+    text-align: center;
+}
+.togglebtn{
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: none;
+}
+.dropdown-menu{   
+    display: none;
+    position: absolute;
+    width: 100%;
+    right: 0rem;
+    top: 75px;
+    height: 0;
+    background: #619afd;
+    border-radius: 10px;
+    gap: 10px;
+    overflow: hidden;
+    transition: height 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open{
+    height: 20rem;
+}
+.dropdown-menu .tryfree1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dropdown-menu a {
+    text-decoration: none;
+    color: #FFFFFF ; 
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 16.41px;
 }
 .container-1{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin-top: 50px;
+
 }
 .content-1{
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -67,7 +109,7 @@
 }
 .content-1 p {
     width: 100%;
-    height: 25px;
+    height: 40px;
     font-family: 'Roboto' , sans-serif;
     font-size: 21px;
     font-weight: 400;
@@ -78,6 +120,7 @@
 }
 .subcontent-1{
     width: 100%;
+    height: 40px;
     display: flex;
     gap: 70px;
 }
@@ -85,7 +128,7 @@
     width: 150px;
     border-radius: 60px;
     background: #FFFFFF;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 .getdemo{
@@ -94,8 +137,11 @@
     color: #FFFFFF;
     border: #FFFFFF solid 1px;
     background: none;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+}
+.hero {
+    width: 50%;
 }
 .hero img{
     width: 100%;
@@ -107,10 +153,12 @@
 }
 .section2{
     width: 100%;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    padding: 100px 300px;
+    padding: 20px 200px;
     align-items: center;
+    gap: 30px;
 }
 .section2 h2 {
     width: 100%;
@@ -123,7 +171,7 @@
     text-align: center;
 }
 .section2 p {
-    width: 566px;
+    width: 70%;
     height: auto;
     font-family: 'Roboto' , sans-serif;
     font-size: 18px;
@@ -134,30 +182,39 @@
 }
 .section2 img {
     width: 100%;
+    height: 67%;
 }
 
 .section3{
     width: 100%;
-    height: 869px;
+    height: 100vh;
     background: #c8d9f8;
     display: flex;
     padding: 90px 0;
     /* justify-content: center; */
     align-items: center;
-    gap: 40px;
+    /* gap: 40px; */
 }
 
 .container-2{
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 120px;
 }
+.group16 {
+    width: 50%;
+}
+.group16 img {
+    width: 100%;
+    height: 100%;
+}
 .content-2{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 }
 .content-2 h3 {
@@ -186,7 +243,7 @@
     border-radius: 60px;
     color: #FFFFFF;
     background: #1E71FF;
-    padding: 20px;
+    padding: 11px;
     text-align: center;
 }
 .getdemo2{
@@ -195,21 +252,27 @@
     color: #1E71FF;
     border: #1E71FF solid 1px;
     background: none;
-    padding: 20px;
+    padding: 11px;
     text-align: center;
 }
 .content-3{
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+}
+.group11 {
+    width: 30%;
+    display: flex;
+   justify-content: end;
 }
 .content-3 img {
     height: auto;
-    margin-top: 18px;
 }
 .content-3 p{
-    width: 100%;
+    width:70%;
     height: 58px;
     font-family: 'Roboto' , sans-serif ;
     font-size: 18px;
@@ -288,19 +351,33 @@
 
 }
 
-@media (1025px <= width <= 1300px){
+@media (1094px <= width <= 1400px){
     .section4{
         padding: 100px 50px;
     }
        .section1,
     .section2{
-        padding: 0 200px ;
+        padding: 0 150px ;
+        height: 100vh;
     }
-     .group11 img{
-        width: 600px;
+  
+    .container-1 h1 {
+        font-size: 60px;
+    }
+
+    .subcontent-1 {
+        gap: 30px;
+        width: 350px;
     }
 }
-@media (946px <= width <= 1024px){
+
+@media (width <= 1176px) {
+
+    .subcontent-1 {
+        gap: 30px;
+    }
+}
+@media (946px <= width <= 1093px){
     .section4 {
         padding: 100px 50px;
     }
@@ -308,9 +385,7 @@
         padding: 90px 50px 90px 0;
         gap: 0;
     }
-    .group11 img{
-        width: 500px;
-    }
+  
     .section1,
     .section2{
         padding: 0 100px ;
@@ -321,36 +396,77 @@
     .footer{
         gap: 10px;
     }
+    .container-1 h1 {
+        font-size: 60px;
+    }
+
+    .subcontent-1 {
+        gap: 30px;
+        width: 310px;
+    }
+    .subcontent-1 span {
+        width: 130px;
+    }
 }
-@media(768px<=width<946px) {
+@media(768px<= width <946px) {
     .section1{
         padding: 0 100px;
-        height: auto;
+        height: 100vh;
     }
     .container-1{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        /* flex-wrap: wrap; */
     }
+ 
+    .content-1 h1{
+        display: flex;
+        justify-content: center;
+        font-size: 60px;
+        line-height: 60px;
+    } 
+     .content-1 p{
+      display: flex;
+     justify-content: center;
+    }
+    
+      .content-1 div {
+        display: flex;
+        justify-content: center;
+    }
+
     .section2,
     .section4{
         padding: 100px;
     }
     .section3{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
         height: auto;
         justify-content: center;
     }
     .container-2{
-        padding: 0 75px;
+        width: 70%;
+        /* padding: 0 75px; */
+        gap: 50px;
+
     }
+    .group16 {
+        width: 70%;
+    }
+    .content-2 h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+  
     .footer{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
-    }
-    .hero{
-        width: 100%;
-        margin: 40px 0;
+        gap: 40px;
     }
     .foottables{
         display: flex;
@@ -358,14 +474,43 @@
     }
 }
 @media (width < 768px ){
-      .section1{
-        padding: 0 17px;
-        height: auto;
+
+    .section1{
+        padding: 0 30px;
+        /* height: 100; */
     }
+    .container-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .content-1 h1{
+        display: flex;
+        justify-content: center;
+        font-size: 28px;
+        line-height: 30px;
+    } 
+     .content-1 p{
+      display: flex;
+     justify-content: center;
+        height: 40px;
+        font-size: 16px;
+        line-height: 20px;
+    
+    }
+    
+      .content-1 div {
+        display: flex;
+        justify-content: center;
+    }
+
     .container-1{
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .section2,
     .section4{
@@ -373,26 +518,28 @@
     }
     .section3{
         display: flex;
+        padding: 60px 0;
         flex-wrap: wrap;
         height: auto;
         justify-content: center;
     }
     .container-2{
-        padding: 0 17px;
-        gap: 30px;
+        width: 70%;
+        gap: 50px;
     }
+    .group16 {
+        width: 70%;
+    }
+    .content-2 h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
     .footer{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 17px;
-    }
-    .hero{
-        width: 100%;
-        margin: 40px 0;
-    }
-    .group11 img{
-         width: 100%;
     }
     .foottables{
         display: flex;
@@ -401,16 +548,45 @@
     .section2 p{
         width: 100%;
     }
-    .subcontent-1{
-        gap: 5px;
-    }
-    .content-1 h1{
-        font-size: 40px;
-        line-height: 40px;
-    }
+ 
+   
     .section2 h2{
         font-size: 35px;
         line-height: 40px;
+    }
+}
+/* Toggle bar release */
+@media (width < 500px){
+
+    .container-2{
+        padding: 0;
+        width: 100%;
+        gap: 20px;
+    }
+    .subcontent-1 span{
+        width: 115px;
+    }
+    .content-3{
+        display: flex;
+        flex-direction: column;   
+    }
+    .content-3 p {
+        width: 90%;
+    }
+}
+@media(max-width : 768px){
+    .navbar-content{
+        display: none;
+    }
+    .togglebtn{
+        display: block;
+    }
+    .dropdown-menu {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
